@@ -1,0 +1,57 @@
+body {
+   background-image: url("");
+   background-size: cover;
+   background-position: center;
+   margin: 10px;
+   padding: 10px;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+   background-color: #f2f2f2;
+   background-image: linear-gradient(to bottom, #eb8181, #ffffff);
+    min-height:70px;
+ }
+ button {
+  box-sizing: border-box;
+ -webkit-appearance: none;
+ -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #0a0a0a;
+  border-radius: 0.6em;
+  color: #424141;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1;
+  margin: 10px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+ }
+ input {
+    background-color: #fcf6f688;
+    font-weight: bold;
+    font-size: 12px;
+    padding:8px 20px;
+ }
+ marquee {
+    color: rgb(249, 249, 250);
+    font-size: 20px;
+    font-style: italic;
+}
+#output {
+   text-align: center; /* Mengatur teks menjadi rata tengah */
+   margin-top: 20px; /* Memberikan margin atas 20 piksel */
+ }
+ .form-container {
+   display: flex; /* Mengatur display menjadi flex */
+   flex-direction: column; /* Mengatur arah tata letak menjadi vertikal */
+   align-items: center; /* Mengatur penempatan elemen secara horizontal di tengah */
+   justify-content: center; /* Mengatur penempatan elemen secara vertikal di tengah */
+   height: 100vh; /* Mengatur tinggi elemen menjadi tinggi viewport */
+   margin: 0 auto; /* Mengatur margin kiri dan kanan menjadi auto */
+ }

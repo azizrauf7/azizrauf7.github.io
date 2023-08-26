@@ -1,0 +1,58 @@
+<html>
+ <head>
+    <title>Login BN666</title>
+ </head>
+   <link rel="stylesheet" href="style.css"/>
+ <body>
+  <div class="form-container">
+ <div>
+     <span>Nama:</span>
+     <input type="text" id="nama">
+ </div>
+     <br>
+ <div>
+     <span>Umur:</span>
+     <input type="number" id="umur">
+ </div>
+  <br>
+  <button oneclick="kirim()">KIRIM</button>
+  <br>
+    <script> 
+ var id_nama = document.getElementById("nama");
+
+ var id_umur = document.getElementById("umur");
+
+ var id_tamp = document.getElementById("tampilan");
+function kirim(){
+ var id_a = document.getElementById("tampilan");
+ id_a.style.color = "red";
+ 
+ id_tamp.innerText = "Nama : "+ id_nama.value +", "+ " Umur : " + 
+id_umur.value + " Tahun"; 
+ alert (id_tamp.innerText);
+ }
+   
+   </script>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <marquee bgcolor="grey" scrollamount="5">by. Rauf Aziz</marquee>
+  <marquee scrollamount="16" bgcolor="grey" direction="right" behavior="alternate">SMK BAKTI NUSANTARA</marquee>
+ </body>
+</html>
