@@ -369,3 +369,81 @@
         height: auto;
     }
 }
+
+
+/* Perbaikan tambahan untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        overflow-x: hidden; /* Mencegah scroll horizontal */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .anime-favorite, .comic-favorite {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden; /* Mencegah gambar keluar dari layar */
+    }
+
+    .carousel img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Perbaikan tampilan teks agar tidak terlalu panjang */
+    .text-box {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /* Perbaikan navbar agar lebih responsif */
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
