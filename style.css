@@ -320,3 +320,39 @@
       font-size: 16px; /* Ukuran judul lebih kecil untuk mobile */
   }
 }
+
+
+/* Memastikan navbar tetap penuh dan terlihat di mobile */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Agar tidak terpotong di layar kecil */
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: row; /* Pastikan tetap horizontal */
+        justify-content: center;
+        width: 100%;
+    }
+}
