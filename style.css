@@ -320,3 +320,52 @@
       font-size: 16px; /* Ukuran judul lebih kecil untuk mobile */
   }
 }
+
+
+/* Tambahan CSS untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .anime-favorite, .comic-favorite {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel img {
+        max-width: 90%;
+        height: auto;
+    }
+}
