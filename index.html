@@ -163,6 +163,14 @@ function changeComicSlide(direction) {
 }
 
 showComicSlide(currentComicSlide);
+document.addEventListener("DOMContentLoaded", function () {
+    if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock("landscape").catch(function (error) {
+            console.warn("Tidak bisa mengunci orientasi:", error);
+        });
+    }
+});
+
 
        </script>
       
