@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Modern</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-audio" loop>
+        <source src="bgmusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Muhamad Rauf Aziz</div>
+      <button id="play-audio">Play Audio</button>
+      <ul class="nav-links">
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-info">
+        <h1>Tentang Saya</h1>
+        <p>Halo, perkenalkan nama saya <strong>Muhamad Rauf Aziz</strong>. Saat ini, saya siswa kelas 11 di <strong>SMK Al-Ihsan Batujajar</strong>, jurusan <strong>Pengembangan Perangkat Lunak dan Gim (PPLG)</strong>. Saya memiliki minat besar dalam dunia teknologi, khususnya di bidang pengembangan perangkat lunak. Sebagai seorang pelajar yang sedang mendalami dunia IT, saya selalu berusaha untuk memperluas pengetahuan dan keterampilan di bidang pemrograman.</p>
+        
+        <p>Di luar kegiatan sekolah, saya senang mengisi waktu luang dengan berbagai hobi, seperti <strong>berolahraga</strong>, <strong>membaca (komik/novel)</strong>, <strong>menonton anime</strong>, dan <strong>mendengarkan musik</strong>. Bagi saya, keseimbangan antara belajar dan hiburan adalah kunci untuk tetap produktif dan kreatif. Dengan hobi-hobi tersebut, saya dapat menjaga semangat dalam menghadapi rutinitas sehari-hari.</p>
+        
+        <p>Sebelum menempuh pendidikan di SMK, saya menyelesaikan pendidikan di <strong>SMP Zainuddin Waru</strong>. Saat ini, saya memiliki cita-cita besar untuk menjadi seorang <strong>Fullstack Developer</strong> yang andal. Impian pendidikan saya adalah melanjutkan studi di perguruan tinggi ternama seperti <strong>ITB</strong>, <strong>UNPAD</strong>, atau <strong>Telkom University</strong>, dengan target meraih gelar <strong>S1 hingga S3 di bidang Teknik Informatika</strong>.</p>
+        
+        <p class="moto">"Setiap baris kode yang ditulis adalah langkah menuju solusi, dan setiap kegagalan adalah bug yang bisa diperbaiki."</p>
+        
+        <p>Terima kasih sudah meluangkan waktu untuk mengenal saya lebih dekat. Semoga perjalanan ini membawa saya lebih dekat kepada impian saya sebagai pengembang perangkat lunak yang sukses. Salam kenal!</p>
+      </div>
+
+    <div class="carousel-container">  
+      <div class="anime-favorit">
+        <h2>Anime Favorit</h2>
+        <div class="carousel">
+          <div class="carousel-content">
+            <div class="carousel-item">
+              <img src="yn.jpeg" alt="Anime 1">
+              <h3>Your Name</h3>
+            </div>
+            <div class="carousel-item">
+              <img src="bleach.jpeg" alt="Anime 2">
+              <h3>Bleach</h3>
+            </div>
+            <div class="carousel-item">
+              <img src="jjk.jpeg" alt="Anime 3">
+              <h3>Jujutsu Kaisen</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="aot.jpeg" alt="Anime 4">
+                <h3>Attack on Titan</h3>
+              </div>
+            <!-- Tambahkan lebih banyak item sesuai kebutuhan -->
+          </div>
+          <!-- Tombol Navigasi -->
+          <button class="prev" onclick="changeSlide(-0.5)">&#10094;</button>
+          <button class="next" onclick="changeSlide(0.5)">&#10095;</button>
+        </div>
+      </div>
+      <!-- Bagian Komik Favorit -->
+<div class="komik-favorit">
+  <h2>Manga/Manhwa Favorit</h2>
+  <div class="carousel">
+      <div class="carousel-content">
+          <!-- Slide Komik -->
+          <div class="carousel-item">
+              <img src="solev.jpg" alt="Komik 1">
+              <h3>Solo Leveling</h3>
+          </div>
+          <div class="carousel-item">
+              <img src="jr.jpg" alt="Komik 2">
+              <h3>Juujika no Rokunin</h3>
+          </div>
+          <div class="carousel-item">
+              <img src="sd.webp" alt="Komik 3">
+              <h3>Sakamoto Days</h3>
+          </div>
+          <div class="carousel-item">
+              <img src="sys.jpeg" alt="Komik 4">
+              <h3>Swordmaster's<br> Youngest Son</h3>
+          </div>
+      </div>
+      <!-- Tombol Navigasi -->
+      <button class="prev" onclick="changeComicSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeComicSlide(1)">&#10095;</button>
+  </div>
+</div>
+</div>
+
+<script>
+// Memutar audio saat pengguna berinteraksi dengan halaman
+document.body.addEventListener('click', function() {
+            const audio = document.getElementById('background-audio');
+            audio.play().catch(function(error) {
+                console.error('Failed to play audio:', error);
+            });
+        });
+
+</script>
+
+      
+      <script>
+ let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const totalSlides = slides.length; // Dapatkan total slide
+
+function showSlide(index) {
+    if (index >= totalSlides) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = totalSlides - 0.5;
+    } else {
+        currentSlide = index;
+    }
+    const offset = -currentSlide * 100; // Sesuaikan offset berdasarkan index
+    document.querySelector('.carousel-content').style.transform = `translateX(${offset}%)`;
+}
+
+function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+}
+
+// Inisialisasi slide pertama
+showSlide(currentSlide);
+
+// Event listener untuk tombol navigasi
+document.querySelector('.prev').addEventListener('click', function() {
+    changeSlide(-0.5);
+});
+
+document.querySelector('.next').addEventListener('click', function() {
+    changeSlide(0.5);
+});
+let currentComicSlide = 0;
+const comicSlides = document.querySelectorAll('.komik-favorit .carousel-item');
+const totalComicSlides = comicSlides.length;
+
+function showComicSlide(index) {
+    if (index >= totalComicSlides) {
+        currentComicSlide = 0;
+    } else if (index < 0) {
+        currentComicSlide = totalComicSlides - 1;
+    } else {
+        currentComicSlide = index;
+    }
+
+    const offset = -currentComicSlide * 100;
+    document.querySelector('.komik-favorit .carousel-content').style.transform = `translateX(${offset}%)`;
+}
+
+function changeComicSlide(direction) {
+    showComicSlide(currentComicSlide + direction);
+}
+
+showComicSlide(currentComicSlide);
+
+       </script>
+      
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Proyek</h2>
+    <div class="project-grid">
+      <div class="project-item">
+        <h3>Proyek 1</h3>
+        <p>Dalam tahap pengembangan...</p>
+      </div>
+      <div class="project-item">
+        <h3>Proyek 2</h3>
+        <p>Dalam tahap pengembangan...</p>
+      </div>
+      <div class="project-item">
+        <h3>Proyek 3</h3>
+        <p>Dalam tahap pengembangan...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Kontak</h2>
+    <p>Hubungi saya melalui email: <a href="mailto:emailkamu@example.com">muhraufaziz@gmail.com</a></p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Muhamad Rauf Aziz. Dibuat dengan perasaan.</p>
+  </footer>
+</body>
+</html>
