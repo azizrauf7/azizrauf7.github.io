@@ -303,5 +303,10 @@
   }
   body {
     background-image: url(bg3.jpg);
+    align-items: center;
+  }
+  .navbar {
+    font-size: 1rem;
+    background-color: rgba(31, 23, 58);
   }
 }
