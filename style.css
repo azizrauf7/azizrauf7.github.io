@@ -159,7 +159,7 @@
   
   /* Footer */
   .footer {
-    background-color: rgba(82, 82, 82, 0.7);
+    background-color: rgba(82, 82, 82);
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -181,7 +181,7 @@
   
   .about-info {
     flex: 2; /* Kolom ini lebih besar */
-    margin-right: 50px; /* Jarak antara kolom info dan anime */
+    margin-right: 10px; /* Jarak antara kolom info dan anime */
   }
   
   .anime-favorit {
@@ -297,19 +297,29 @@
     font-size: 1rem;
     
   }
+  .about h1 {
+    font-size: 25px;
+  }
   .about {
     text-align: center;
     width: 96%;
+    padding-left: 10;
+    padding-right: 10;
+    padding: 40px;
   }
   body {
     background-image: url(bg3.jpg);
+    background-size: 120%;
     align-items: center;
   }
   .navbar {
-    font-size: 10px;
+    font-size: 13px;
     background-color: rgba(31, 23, 58);
   }
   .nav-links {
-    
+
+  }
+  .footer {
+    font-size: 15px;
   }
 }
