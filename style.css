@@ -313,10 +313,11 @@
     align-items: center;
   }
   .navbar {
-    font-size: 13px;
+    font-size: 11px;
     background-color: rgba(31, 23, 58);
   }
-  .nav-links {
+  .nav a{
+    font-size: 11px;
 
   }
   .footer {
