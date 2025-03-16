@@ -175,7 +175,8 @@
   
   .about-container {
     display: flex;
-    justify-content: space-between; /* Membuat ruang antara dua kolom */
+    justify-content: space-between; 
+    flex-wrap: wrap;
   }
   
   .about-info {
@@ -225,8 +226,9 @@
 /* Jika ada elemen flex yang membungkus bagian ini, atur agar elemen tampil secara vertikal */
 .carousel-container {
   display: flex;
-  flex-direction: column; /* Mengatur agar elemen di dalamnya tampil ke bawah */
-  align-items: center; /* Mengatur elemen di tengah */
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
   .carousel {
@@ -290,69 +292,16 @@
   #play-audio {
     display: none; /* Menyembunyikan tombol */
   }
-  /* Media Query untuk layar dengan lebar maksimal 600px (mobile) */
-@media only screen and (max-width: 600px) {
-  .anime-favorit, .komik-favorit {
-      padding: 10px; /* Kurangi padding agar lebih proporsional di layar kecil */
-      font-size: 14px; /* Kurangi ukuran font agar lebih pas di layar kecil */
+@media screen and (max-width: 476px) {
+  .about p {
+    font-size: 1rem;
+    
   }
-
-  .carousel {
-      max-width: 100%; /* Pastikan carousel menggunakan lebar penuh layar mobile */
+  .about {
+    text-align: center;
+    width: 96%;
   }
-
-  .carousel-item img {
-      height: auto; /* Biarkan gambar menyesuaikan tinggi agar tidak terpotong */
-      max-width: 100%; /* Pastikan gambar tidak lebih besar dari layar */
+  body {
+    background-image: url(bg3.jpg);
   }
-
-  .prev, .next {
-      width: 30px; /* Perbesar tombol navigasi agar lebih mudah diakses di layar sentuh */
-      height: 30px;
-      padding: 10px; /* Tambahkan padding */
-  }
-
-  .prev, .next {
-      top: 50%; /* Posisikan tombol sedikit lebih rendah untuk layar kecil */
-  }
-
-  h3 {
-      font-size: 16px; /* Ukuran judul lebih kecil untuk mobile */
-  }
-}
-
-
-/* Memastikan navbar tetap penuh dan terlihat di mobile */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Agar tidak terpotong di layar kecil */
-}
-
-.navbar ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar ul li {
-    margin: 0 10px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    .navbar ul {
-        flex-direction: row; /* Pastikan tetap horizontal */
-        justify-content: center;
-        width: 100%;
-    }
 }
