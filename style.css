@@ -306,7 +306,10 @@
     align-items: center;
   }
   .navbar {
-    font-size: 1rem;
+    font-size: 10px;
     background-color: rgba(31, 23, 58);
+  }
+  .nav-links {
+    
   }
 }
